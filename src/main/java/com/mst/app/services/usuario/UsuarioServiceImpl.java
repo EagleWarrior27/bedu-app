@@ -1,4 +1,4 @@
-package com.mst.app.services;
+package com.mst.app.services.usuario;
 
 import com.mst.app.entity.Usuario;
 import com.mst.app.repository.UsuarioRepository;
@@ -29,7 +29,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     @Transactional(readOnly = true)
-    public Optional<Usuario> findById(Integer id) {
+    public Optional<Usuario> findById(Long id) {
         return usuarioRepository.findById(id);
     }
 
@@ -41,7 +41,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     @Transactional
-    public void deleteById(Integer id) {
+    public void deleteById(Long id) {
         usuarioRepository.deleteById(id);
     }
 }

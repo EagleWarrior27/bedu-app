@@ -1,7 +1,7 @@
 package com.mst.app.controllers;
 
 import com.mst.app.entity.Usuario;
-import com.mst.app.services.UsuarioService;
+import com.mst.app.services.usuario.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +24,7 @@ public class UsuarioController {
     }
 
     @GetMapping ("/{id}")
-    public ResponseEntity<?> read(@PathVariable(value = "id") Integer id) {
+    public ResponseEntity<?> read(@PathVariable(value = "id") Long id) {
         Optional<Usuario> usuario = usuarioService.findById(id);
 
         if(!usuario.isPresent()) {
@@ -35,7 +35,7 @@ public class UsuarioController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> update(@RequestBody Usuario usuarioInfo, @PathVariable(value = "id") Integer id) {
+    public ResponseEntity<?> update(@RequestBody Usuario usuarioInfo, @PathVariable(value = "id") Long id) {
         Optional<Usuario> usuario = usuarioService.findById(id);
 
         if(!usuario.isPresent()) {
@@ -51,7 +51,7 @@ public class UsuarioController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> delete(@PathVariable(value = "id") Integer id) {
+    public ResponseEntity<?> delete(@PathVariable(value = "id") Long id) {
         if(!usuarioService.findById(id).isPresent()) {
             return ResponseEntity.notFound().build();
         }

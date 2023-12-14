@@ -1,16 +1,13 @@
 package com.mst.app.entity;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Table(name = "usuarios")
-public class Usuario implements Serializable {
-    private static final long serialVersionUID = -906960843698080433L;
-
+public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idUsuario;
+    private Long id_usuario;
     @Column(length = 90)
     private String nombre;
     @Column(name="correo", nullable = false, length = 60, unique = true)
@@ -18,13 +15,11 @@ public class Usuario implements Serializable {
     private String password;
     private String avatar;
 
-    public Integer getIdUsuario() {
-        return idUsuario;
-    }
+    public Usuario() {}
 
-    public void setIdUsuario(Integer idUsuario) {
-        this.idUsuario = idUsuario;
-    }
+    public Long getId_usuario() { return id_usuario; }
+
+    public void setId_usuario(Long id_usuario) { this.id_usuario = id_usuario; }
 
     public String getNombre() {
         return nombre;
@@ -56,5 +51,16 @@ public class Usuario implements Serializable {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id_usuario=" + id_usuario +
+                ", nombre='" + nombre + '\'' +
+                ", correo='" + correo + '\'' +
+                ", password='" + password + '\'' +
+                ", avatar='" + avatar + '\'' +
+                '}';
     }
 }
