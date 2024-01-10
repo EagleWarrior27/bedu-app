@@ -1,7 +1,7 @@
 package com.mst.app.services.cortes;
 
 
-import com.mst.app.entity.Corte;
+import com.mst.app.persistence.entities.Corte;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

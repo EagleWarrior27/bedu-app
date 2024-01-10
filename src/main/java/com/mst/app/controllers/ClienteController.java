@@ -1,6 +1,6 @@
 package com.mst.app.controllers;
 
-import com.mst.app.entity.Cliente;
+import com.mst.app.persistence.entities.Cliente;
 import com.mst.app.services.clientes.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

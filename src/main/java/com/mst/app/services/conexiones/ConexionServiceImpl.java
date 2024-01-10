@@ -1,7 +1,7 @@
 package com.mst.app.services.conexiones;
 
-import com.mst.app.entity.Conexion;
-import com.mst.app.repository.ConexionRepository;
+import com.mst.app.persistence.entities.Conexion;
+import com.mst.app.persistence.ConexionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

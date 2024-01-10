@@ -1,7 +1,7 @@
 package com.mst.app.services.direcciones;
 
 
-import com.mst.app.entity.Direccion;
+import com.mst.app.persistence.entities.Direccion;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

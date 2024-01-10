@@ -1,6 +1,6 @@
 package com.mst.app.controllers;
 
-import com.mst.app.entity.Direccion;
+import com.mst.app.persistence.entities.Direccion;
 import com.mst.app.services.direcciones.DireccionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

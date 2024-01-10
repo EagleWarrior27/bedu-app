@@ -1,6 +1,6 @@
-package com.mst.app.repository;
+package com.mst.app.persistence;
 
-import com.mst.app.entity.Plan;
+import com.mst.app.persistence.entities.Plan;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

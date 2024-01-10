@@ -1,7 +1,7 @@
 package com.mst.app.services.usuario;
 
-import com.mst.app.entity.Usuario;
-import com.mst.app.repository.UsuarioRepository;
+import com.mst.app.persistence.entities.Usuario;
+import com.mst.app.persistence.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

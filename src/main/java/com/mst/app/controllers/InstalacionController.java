@@ -1,6 +1,6 @@
 package com.mst.app.controllers;
 
-import com.mst.app.entity.Instalacion;
+import com.mst.app.persistence.entities.Instalacion;
 import com.mst.app.services.instalaciones.InstalacionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

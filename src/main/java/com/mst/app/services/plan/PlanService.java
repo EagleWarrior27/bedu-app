@@ -1,6 +1,6 @@
 package com.mst.app.services.plan;
 
-import com.mst.app.entity.Plan;
+import com.mst.app.persistence.entities.Plan;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

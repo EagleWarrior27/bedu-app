@@ -1,9 +1,7 @@
 package com.mst.app.services.antenas;
 
-import com.mst.app.entity.Antena;
-import com.mst.app.entity.Cliente;
-import com.mst.app.repository.AntenaRepository;
-import com.mst.app.repository.ClienteRepository;
+import com.mst.app.persistence.entities.Antena;
+import com.mst.app.persistence.AntenaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

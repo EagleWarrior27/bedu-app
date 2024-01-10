@@ -1,6 +1,6 @@
 package com.mst.app.services.pagos;
 
-import com.mst.app.entity.Pago;
+import com.mst.app.persistence.entities.Pago;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

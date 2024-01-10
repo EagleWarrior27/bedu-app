@@ -1,7 +1,7 @@
 package com.mst.app.services.plan;
 
-import com.mst.app.entity.Plan;
-import com.mst.app.repository.PlanRepository;
+import com.mst.app.persistence.entities.Plan;
+import com.mst.app.persistence.PlanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

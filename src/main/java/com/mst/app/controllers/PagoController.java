@@ -1,6 +1,6 @@
 package com.mst.app.controllers;
 
-import com.mst.app.entity.Pago;
+import com.mst.app.persistence.entities.Pago;
 import com.mst.app.services.pagos.PagoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

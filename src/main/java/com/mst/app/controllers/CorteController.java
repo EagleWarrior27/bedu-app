@@ -1,6 +1,6 @@
 package com.mst.app.controllers;
 
-import com.mst.app.entity.Corte;
+import com.mst.app.persistence.entities.Corte;
 import com.mst.app.services.cortes.CorteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

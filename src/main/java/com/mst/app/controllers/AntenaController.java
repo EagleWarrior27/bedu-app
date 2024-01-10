@@ -1,6 +1,6 @@
 package com.mst.app.controllers;
 
-import com.mst.app.entity.Antena;
+import com.mst.app.persistence.entities.Antena;
 import com.mst.app.services.antenas.AntenaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

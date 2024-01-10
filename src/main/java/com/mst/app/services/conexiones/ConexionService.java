@@ -1,6 +1,6 @@
 package com.mst.app.services.conexiones;
 
-import com.mst.app.entity.Conexion;
+import com.mst.app.persistence.entities.Conexion;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

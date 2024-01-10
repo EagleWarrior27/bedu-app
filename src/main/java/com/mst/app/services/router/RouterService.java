@@ -1,6 +1,6 @@
 package com.mst.app.services.router;
 
-import com.mst.app.entity.Router;
+import com.mst.app.persistence.entities.Router;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

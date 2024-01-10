@@ -1,7 +1,6 @@
-package com.mst.app.entity;
+package com.mst.app.persistence.entities;
 
 import javax.persistence.*;
-import java.util.Calendar;
 
 @Entity
 @Table(name = "conexiones")

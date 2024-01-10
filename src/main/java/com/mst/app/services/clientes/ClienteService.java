@@ -1,6 +1,6 @@
 package com.mst.app.services.clientes;
 
-import com.mst.app.entity.Cliente;
+import com.mst.app.persistence.entities.Cliente;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

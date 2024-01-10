@@ -1,6 +1,4 @@
-package com.mst.app.entity;
-
-import org.hibernate.annotations.GeneratorType;
+package com.mst.app.persistence.entities;
 
 import javax.persistence.*;
 

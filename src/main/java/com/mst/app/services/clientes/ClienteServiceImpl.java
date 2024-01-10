@@ -1,7 +1,7 @@
 package com.mst.app.services.clientes;
 
-import com.mst.app.entity.Cliente;
-import com.mst.app.repository.ClienteRepository;
+import com.mst.app.persistence.entities.Cliente;
+import com.mst.app.persistence.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

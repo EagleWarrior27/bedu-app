@@ -1,6 +1,6 @@
 package com.mst.app.services.antenas;
 
-import com.mst.app.entity.Antena;
+import com.mst.app.persistence.entities.Antena;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

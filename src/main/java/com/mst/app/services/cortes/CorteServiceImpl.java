@@ -1,7 +1,7 @@
 package com.mst.app.services.cortes;
 
-import com.mst.app.entity.Corte;
-import com.mst.app.repository.CorteRepository;
+import com.mst.app.persistence.entities.Corte;
+import com.mst.app.persistence.CorteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,7 +1,7 @@
 package com.mst.app.services.pagos;
 
-import com.mst.app.entity.Pago;
-import com.mst.app.repository.PagoRepository;
+import com.mst.app.persistence.entities.Pago;
+import com.mst.app.persistence.PagoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

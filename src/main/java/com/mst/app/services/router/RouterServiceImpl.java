@@ -1,7 +1,7 @@
 package com.mst.app.services.router;
 
-import com.mst.app.entity.Router;
-import com.mst.app.repository.RouterRepository;
+import com.mst.app.persistence.entities.Router;
+import com.mst.app.persistence.RouterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

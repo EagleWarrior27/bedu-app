@@ -1,7 +1,7 @@
 package com.mst.app.services.instalaciones;
 
-import com.mst.app.entity.Instalacion;
-import com.mst.app.repository.InstalacionRepository;
+import com.mst.app.persistence.entities.Instalacion;
+import com.mst.app.persistence.InstalacionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

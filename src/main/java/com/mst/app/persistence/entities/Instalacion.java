@@ -1,4 +1,4 @@
-package com.mst.app.entity;
+package com.mst.app.persistence.entities;
 
 import javax.persistence.*;
 

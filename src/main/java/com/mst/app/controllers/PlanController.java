@@ -1,6 +1,6 @@
 package com.mst.app.controllers;
 
-import com.mst.app.entity.Plan;
+import com.mst.app.persistence.entities.Plan;
 import com.mst.app.services.plan.PlanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
