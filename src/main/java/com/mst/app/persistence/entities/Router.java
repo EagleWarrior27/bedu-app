@@ -1,37 +1,20 @@
 package com.mst.app.persistence.entities;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "routers")
+@NoArgsConstructor
 public class Router {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_router;
+
     private String ip;
+
     private String mac;
-
-    public Long getId_router() {
-        return id_router;
-    }
-
-    public void setId_router(Long id_router) {
-        this.id_router = id_router;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    public String getMac() {
-        return mac;
-    }
-
-    public void setMac(String mac) {
-        this.mac = mac;
-    }
 }
