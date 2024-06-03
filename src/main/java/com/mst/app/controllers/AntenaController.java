@@ -1,16 +1,14 @@
 package com.mst.app.controllers;
 
-import com.mst.app.persistence.entities.Antena;
+import com.mst.app.models.AntenaDTO;
 import com.mst.app.services.antenas.AntenaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import javax.validation.Valid;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 @RestController
 @RequestMapping("/antenas")
@@ -18,14 +16,19 @@ public class AntenaController {
     @Autowired
     private AntenaService antenaService;
 
+    @GetMapping
+    public ResponseEntity<?> readAll() {
+        return ResponseEntity.ok(antenaService.findAll());
+    }
+
     @PostMapping
-    public ResponseEntity<?> create(@RequestBody Antena antena) {
+    public ResponseEntity<?> create(@RequestBody @Valid AntenaDTO antena) {
         return ResponseEntity.status(HttpStatus.CREATED).body(antenaService.save(antena));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<?> read(@PathVariable(value = "id") Long id) {
-        Optional<Antena> antena = antenaService.findById(id);
+        Optional<AntenaDTO> antena = antenaService.findById(id);
 
         if(!antena.isPresent()) {
             return ResponseEntity.notFound().build();
@@ -35,8 +38,8 @@ public class AntenaController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> update(@RequestBody Antena antenaInfo, @PathVariable(value = "id") Long id) {
-        Optional<Antena> antena = antenaService.findById(id);
+    public ResponseEntity<?> update(@PathVariable(value = "id") Long id, @RequestBody @Valid AntenaDTO antenaInfo) {
+        Optional<AntenaDTO> antena = antenaService.findById(id);
 
         if(!antena.isPresent()) {
             return ResponseEntity.notFound().build();
@@ -56,14 +59,5 @@ public class AntenaController {
 
         antenaService.deleteById(id);
         return ResponseEntity.ok().build();
-    }
-
-    @GetMapping
-    public List<Antena> readAll() {
-        List<Antena> antenas = StreamSupport
-                .stream(antenaService.findAll().spliterator(), false)
-                .collect(Collectors.toList());
-
-        return antenas;
     }
 }

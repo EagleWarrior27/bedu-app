@@ -1,19 +1,15 @@
 package com.mst.app.services.antenas;
 
-import com.mst.app.persistence.entities.Antena;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import com.mst.app.models.AntenaDTO;
 
 import java.util.Optional;
 
 public interface AntenaService {
-    public Iterable<Antena> findAll();
+    Iterable<AntenaDTO> findAll();
 
-    public Page<Antena> findAll(Pageable pageable);
+    Optional<AntenaDTO> findById(Long id);
 
-    public Optional<Antena> findById(Long id);
+    AntenaDTO save(AntenaDTO antena);
 
-    public Antena save(Antena antena);
-
-    public void deleteById(Long id);
+    void deleteById(Long id);
 }

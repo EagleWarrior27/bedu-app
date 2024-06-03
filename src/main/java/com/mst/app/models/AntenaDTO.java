@@ -1,23 +1,24 @@
-package com.mst.app.persistence.entities;
+package com.mst.app.models;
 
+import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.PositiveOrZero;
 
 @Data
-@Entity
-@Table(name = "antenas")
-@NoArgsConstructor
-public class Antena {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_antena")
+@Builder
+public class AntenaDTO {
+    @PositiveOrZero(message = "El identificador no puede ser un número negativo")
     private Long idAntena;
 
+    @NotBlank(message = "Se debe proporcionar una dirección IP")
     private String ip;
 
+    @NotBlank(message = "Se debe proporcionar una dirección MAC")
     private String mac;
+
+    public AntenaDTO() { }
 
     public Long getIdAntena() {
         return idAntena;

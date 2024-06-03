@@ -1,42 +1,42 @@
 package com.mst.app.services.antenas;
 
-import com.mst.app.persistence.entities.Antena;
+import com.mst.app.mappers.AntenaMapper;
+import com.mst.app.models.AntenaDTO;
 import com.mst.app.persistence.AntenaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class AntenaServiceImpl implements AntenaService{
     @Autowired
     private AntenaRepository antenaRepository;
 
+    @Autowired
+    private AntenaMapper antenaMapper;
+
     @Override
     @Transactional(readOnly = true)
-    public Iterable<Antena> findAll() {
-        return antenaRepository.findAll();
+    public List<AntenaDTO> findAll() {
+        return antenaRepository.findAll().stream().map(antena -> antenaMapper.antenaEntityToAntenaModel(antena)).collect(Collectors.toList());
     }
 
     @Override
     @Transactional(readOnly = true)
-    public Page<Antena> findAll(Pageable pageable) {
-        return antenaRepository.findAll(pageable);
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public Optional<Antena> findById(Long id) {
-        return antenaRepository.findById(id);
+    public Optional<AntenaDTO> findById(Long id) {
+        return antenaRepository.findById(id)
+                .map(antena -> Optional.of(antenaMapper.antenaEntityToAntenaModel(antena)))
+                .orElse(Optional.empty());
     }
 
     @Override
     @Transactional
-    public Antena save(Antena cliente) {
-        return antenaRepository.save(cliente);
+    public AntenaDTO save(AntenaDTO antena) {
+        return antenaMapper.antenaEntityToAntenaModel(antenaRepository.save(antenaMapper.antenaModelToAntenaEntity(antena)));
     }
 
     @Override
